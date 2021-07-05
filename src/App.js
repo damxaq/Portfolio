@@ -1,7 +1,17 @@
-import "./App.css";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
-  return <div>start</div>;
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route component={Home} path="/" />
+        <Route component={About} path="/about" />
+        <Route component={SinglePost} path="/post/:slug" />
+        <Route component={Post} path="/post" />
+        <Route component={Project} path="/project" />
+      </Switch>
+    </BrowserRouter>
+  );
 }
 
 export default App;

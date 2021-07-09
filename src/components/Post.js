@@ -27,9 +27,9 @@ export default function Post() {
   return (
     <main className="posts-main">
       <section className="posts-container">
-        <h1 className="route-title">Projects Page</h1>
+        <h1 className="route-title">Projects</h1>
         <h2 className="route-description">
-          Some of my most recent programming projects
+          Some of my recent personal programming projects
         </h2>
         <div className="articles-wrapper">
           {postData &&

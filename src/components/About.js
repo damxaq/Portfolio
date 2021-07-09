@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
-import mongolia from "../mongolia.jpg";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 
@@ -27,7 +26,6 @@ export default function About() {
 
   return (
     <main className="about-main">
-      <img src={mongolia} alt="Mongolia" />
       {author ? (
         <div className="about-container">
           <section>

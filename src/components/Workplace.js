@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
 
-export default function Project() {
-  const [projectData, setProjectData] = useState(null);
+export default function Workplace() {
+  const [workData, setWorkData] = useState(null);
 
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "project"]{
+        `*[_type == "work"]{
             title,
             date,
             place,
             description,
-            projectType,
+            workType,
             link,
             tags
         }`
       )
-      .then((data) => setProjectData(data))
+      .then((data) => setWorkData(data))
       .catch(console.error);
   }, []);
   return (
@@ -28,33 +28,33 @@ export default function Project() {
           My professional experience as software developer
         </h2>
         <section>
-          {projectData &&
-            projectData.map((project, index) => (
+          {workData &&
+            workData.map((workplace, index) => (
               <article key={index}>
                 <h3 className="job-title">
                   <a
-                    href={project.link}
-                    alt={project.title}
+                    href={workplace.link}
+                    alt={workplace.title}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {project.title}
+                    {workplace.title}
                   </a>
                 </h3>
                 <div className="job-details">
                   <span>
                     <strong>Finished on</strong>:{" "}
-                    {new Date(project.date).toLocaleDateString()}
+                    {new Date(workplace.date).toLocaleDateString()}
                   </span>
                   <span>
-                    <strong>Company</strong>: {project.place}
+                    <strong>Company</strong>: {workplace.place}
                   </span>
                   <span>
-                    <strong>Type</strong>: {project.projectType}
+                    <strong>Type</strong>: {workplace.workplaceType}
                   </span>
-                  <p>{project.description}</p>
+                  <p>{workplace.description}</p>
                   <a
-                    href={project.link}
+                    href={workplace.link}
                     rel="noopener noreferrer"
                     target="_blank"
                   >

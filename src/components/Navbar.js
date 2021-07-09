@@ -10,31 +10,31 @@ export default function Navbar() {
           <NavLink
             to="/"
             exact
-            activeClassName="active-first-link"
-            className="navlink first"
+            activeClassName="active-navlink"
+            className="navlink"
           >
-            Damian
+            Home
           </NavLink>
           <NavLink
             to="/post"
             activeClassName="active-navlink"
             className="navlink"
           >
-            Blog
+            Projects
           </NavLink>
           <NavLink
-            to="/project"
+            to="/workplaces"
             activeClassName="active-navlink"
             className="navlink"
           >
-            Projects
+            Experience
           </NavLink>
           <NavLink
             to="/about"
             activeClassName="active-navlink"
             className="navlink"
           >
-            About Me!
+            About Me
           </NavLink>
         </nav>
         <div className="social-icons-container">

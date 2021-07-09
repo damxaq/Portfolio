@@ -1,6 +1,6 @@
 export default {
-  name: "project",
-  title: "Project",
+  name: "work",
+  title: "Work",
   type: "document",
   fields: [
     {
@@ -20,8 +20,8 @@ export default {
       type: "text",
     },
     {
-      name: "projectType",
-      title: "Project type",
+      name: "workType",
+      title: "Work type",
       type: "string",
       options: {
         list: [

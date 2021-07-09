@@ -1,20 +1,371 @@
-/* @tailwind base;
-@tailwind component;
-@tailwind utilities; */
-@import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
+
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
 
 .cursive {
   font-family: "PT Sans Narrow", sans-serif;
 }
 
-.prose img {
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 5px;
+body {
+  margin: 0;
 }
 
-.home-name {
-  font-size: 150px;
+.home img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.home section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 10rem 2rem;
+}
+
+.home section h1 {
+  color: green;
+  font-weight: bold;
+  font-size: 5rem;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.navbar-header {
+  background-color: rgb(20, 36, 85);
+}
+
+.navbar-container {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+.navbar-container nav {
+  display: flex;
+}
+
+.active-first-link {
+  color: white;
+}
+
+.navlink {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.75rem;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.navlink.first {
+  margin-right: 1rem;
+  font-size: 3rem;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.navlink:hover {
+  color: green;
+}
+
+.active-navlink {
+  color: red;
+  background-color: rebeccapurple;
+}
+
+.social-icons-container {
+  display: inline-flex;
+  padding: 1.5rem 0;
+}
+
+.social-icons-container * {
+  margin-right: 1rem;
+  height: 35px !important;
+  width: 35px !important;
+}
+
+.posts-main {
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.posts-container {
+  width: 100%;
+  margin: auto;
+}
+
+.route-title {
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.route-description {
+  font-size: 1.5rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.posts-container h3 {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  background-color: rebeccapurple;
+  opacity: 0.8;
+  border-radius: 0.25rem;
+}
+
+.articles-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.articles-wrapper article {
+  padding: 1rem;
+}
+
+.article-span {
+  display: block;
+  height: 16rem;
+  position: relative;
+  border-radius: 10px;
+  line-height: 1.375;
+  background-color: white;
+  border-left: solid green 10px;
+  box-shadow: 3px 6px 10px rgb(44, 44, 44);
+}
+
+.article-span img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  object-fit: cover;
+  position: absolute;
+}
+
+.article-span span {
+  display: block;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+.jobs-main {
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.jobs-container {
+  width: 100%;
+  margin: auto;
+}
+
+.jobs-container section {
+  display: flex;
+  flex-direction: column;
+}
+
+.jobs-container section article {
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 10px;
+  position: relative;
+  background-color: white;
+  box-shadow: 3px 6px 10px rgb(44, 44, 44);
+}
+
+.job-title {
+  color: rgb(93, 93, 93);
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.job-title:hover {
+  color: rgb(133, 12, 12);
+}
+
+.job-details {
+  color: rgb(93, 93, 93);
+  font-size: 0.75rem;
+}
+
+.job-details span {
+  margin-right: 1rem;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.job-details p {
+  margin: 1.5rem 0;
+  font-size: 1.125rem;
+  color: rgb(93, 93, 93);
+  line-height: 1.625;
+}
+
+.job-details a {
+  color: rgb(195, 55, 55);
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.job-details a:hover {
+  text-decoration: underline;
+  color: rgb(230, 92, 92);
+}
+
+.about-main {
+  position: relative;
+  height: 100vh;
+}
+
+.about-main > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-container {
+  padding: 3rem;
+  width: 100%;
+  margin: auto;
+  position: relative;
+}
+
+.about-container section {
+  background-color: rgb(28, 20, 98);
+  border-radius: 0.5rem;
+  box-shadow: 3px 6px 10px rgb(44, 44, 44);
+  /* display: flex; */
+  padding: 4rem;
+}
+
+.my-photo {
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 10rem;
+  margin-right: 1rem;
+}
+
+.about-card {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-card h1 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 3rem;
+  color: green;
+  margin-bottom: 1rem;
+}
+
+.about-card span {
+  color: rgb(120, 221, 120);
+}
+
+.about-block-content {
+  color: white;
+  font-size: 1rem;
+}
+
+.single-post-main {
+  background-color: rgb(185, 184, 184);
+  min-height: 100vh;
+  padding: 3rem;
+}
+
+.single-post-container {
+  width: 100%;
+  box-shadow: 3px 6px 10px rgb(44, 44, 44);
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5rem;
+  background-color: rgb(158, 216, 158);
+}
+
+.single-post-container header {
+  position: relative;
+}
+
+.single-post-card-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.single-post-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.25rem;
+  padding: 3rem;
+}
+
+.single-post-card h1 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.single-post-card > div {
+  display: flex;
+  justify-content: center;
+  color: rgb(66, 66, 66);
+}
+
+.single-post-card img {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 1.5rem;
+}
+
+.single-post-card p {
+  font-family: "PT Sans Narrow", sans-serif;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.post-image {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 400px;
+}
+
+.post-block-content {
+  padding: 3rem 4rem;
+  max-width: 100%;
 }

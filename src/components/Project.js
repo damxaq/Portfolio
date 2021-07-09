@@ -21,20 +21,17 @@ export default function Project() {
       .catch(console.error);
   }, []);
   return (
-    <main className="bg-green-100 min-h-screen p-12">
-      <section className="container mx-auto">
-        <h1 className="text-5xl flex justify-center cursive">My Projects</h1>
-        <h2 className="text-lg text-gray-600 flex justify-center mb-12">
-          Welcome to my projects page!
+    <main className="jobs-main">
+      <section className="jobs-container">
+        <h1 className="route-title">My Jobs</h1>
+        <h2 className="route-description">
+          My professional experience as software developer
         </h2>
-        <section className="grid grid-cols-2 gap-8">
+        <section>
           {projectData &&
             projectData.map((project, index) => (
-              <article
-                className="relative rouned-lg shadow-xl bg-white p-16"
-                key={index}
-              >
-                <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-red-700">
+              <article key={index}>
+                <h3 className="job-title">
                   <a
                     href={project.link}
                     alt={project.title}
@@ -44,32 +41,24 @@ export default function Project() {
                     {project.title}
                   </a>
                 </h3>
-                <div className="text-gray-500 text-xs space-x-4">
+                <div className="job-details">
                   <span>
-                    <strong className="font-bold">Finished on</strong>:{" "}
+                    <strong>Finished on</strong>:{" "}
                     {new Date(project.date).toLocaleDateString()}
                   </span>
                   <span>
-                    <strong className="font-bold">Company</strong>:{" "}
-                    {project.place}
+                    <strong>Company</strong>: {project.place}
                   </span>
                   <span>
-                    <strong className="font-bold">Type</strong>:{" "}
-                    {project.projectType}
+                    <strong>Type</strong>: {project.projectType}
                   </span>
-                  <p className="my-6 text-lg text-gray-700 leading-relaxed">
-                    {project.description}
-                  </p>
+                  <p>{project.description}</p>
                   <a
                     href={project.link}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="text-red-500 font-bold hover:underline hover:text-red-400 text-xl"
                   >
-                    View The Project{" "}
-                    <span role="img" aria-label="right-pointer">
-                      {"=>"}
-                    </span>
+                    Visit their website <span>{"➨"}</span>
                   </a>
                 </div>
               </article>

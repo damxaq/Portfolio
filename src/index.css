@@ -49,13 +49,14 @@ main {
 
 .navbar-container nav {
   display: flex;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 .navlink {
   display: inline-flex;
   align-items: center;
   padding: 0 0.75rem;
-  margin: 1rem 0;
+  margin: 1rem 0.6rem;
   color: white;
   font-size: 1rem;
   border-bottom: 2px solid transparent;
@@ -92,6 +93,7 @@ main {
 }
 
 .route-title {
+  color: rgb(206, 206, 206);
   font-size: 3rem;
   display: flex;
   justify-content: center;

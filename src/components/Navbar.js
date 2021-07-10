@@ -16,7 +16,7 @@ export default function Navbar() {
             Home
           </NavLink>
           <NavLink
-            to="/post"
+            to="/projects"
             activeClassName="active-navlink"
             className="navlink"
           >

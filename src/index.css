@@ -14,7 +14,7 @@ main {
 .home section {
   position: relative;
   display: flex;
-  padding-top: 10rem;
+  padding-top: 6rem;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -22,17 +22,37 @@ main {
 .home section h1 {
   color: rgba(193, 202, 198, 255);
   font-weight: bold;
-  font-size: 4rem;
+  font-size: 3rem;
   font-family: "Julius Sans One", sans-serif;
   margin-bottom: 3rem;
   margin: 0 auto;
+  text-align: center;
 }
 
 .home section h2 {
   color: rgb(206, 206, 206);
   font-size: 1.6rem;
   font-family: "PT Sans Narrow", sans-serif;
-  margin: 0 auto;
+  margin: 1rem auto;
+}
+
+.home section h3 {
+  color: rgb(208, 208, 255);
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  padding: 0 8rem;
+  max-width: 1000px;
+  text-align: center;
+  line-height: 2rem;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: bold;
+}
+
+.home-image {
+  width: 20rem;
+  margin: 1rem auto;
+  border: 2px solid black;
+  box-shadow: 6px 9px 15px rgb(19, 19, 19);
 }
 
 .navbar-header {

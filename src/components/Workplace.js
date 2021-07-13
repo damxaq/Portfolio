@@ -9,7 +9,8 @@ export default function Workplace() {
       .fetch(
         `*[_type == "work"]{
             title,
-            date,
+            startDate,
+            endDate,
             place,
             description,
             workType,
@@ -17,9 +18,15 @@ export default function Workplace() {
             tags
         }`
       )
-      .then((data) => setWorkData(data))
+      .then((data) => {
+        const sortedData = data.sort((a, b) =>
+          a.startDate > b.startDate ? -1 : b.startDate > a.startDate ? 1 : 0
+        );
+        setWorkData(sortedData);
+      })
       .catch(console.error);
   }, []);
+
   return (
     <main className="jobs-main">
       <section className="jobs-container">
@@ -43,15 +50,27 @@ export default function Workplace() {
                 </h3>
                 <div className="job-details">
                   <span>
-                    <strong>Finished on</strong>:{" "}
-                    {new Date(workplace.date).toLocaleDateString()}
+                    <strong>Started</strong>:{" "}
+                    {new Date(workplace.startDate).toLocaleDateString()}
+                  </span>
+                  <span>
+                    <strong>Finished</strong>:{" "}
+                    {new Date(workplace.endDate).toLocaleDateString()}
                   </span>
                   <span>
                     <strong>Company</strong>: {workplace.place}
                   </span>
                   <span>
-                    <strong>Type</strong>: {workplace.workplaceType}
+                    <strong>Type</strong>: {workplace.workType}
                   </span>
+                  {workplace.tags && (
+                    <div className="tags-container">
+                      {workplace.tags.map((tag, index) => (
+                        <span key={index}>{tag}</span>
+                      ))}
+                    </div>
+                  )}
+
                   <p>{workplace.description}</p>
                   <a
                     href={workplace.link}

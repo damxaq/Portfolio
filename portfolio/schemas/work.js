@@ -8,7 +8,11 @@ export default {
       type: "string",
     },
     {
-      name: "date",
+      name: "startDate",
+      type: "datetime",
+    },
+    {
+      name: "endDate",
       type: "datetime",
     },
     {
@@ -25,9 +29,9 @@ export default {
       type: "string",
       options: {
         list: [
-          { value: "personal", title: "Personal" },
-          { value: "client", title: "Client" },
-          { value: "school", title: "School" },
+          { value: "Front-End Developer", title: "Front-End Developer" },
+          { value: "Back-End Developer", title: "Back-End Developer" },
+          { value: "Full-Stack Developer", title: "Full-Stack Developer" },
         ],
       },
     },

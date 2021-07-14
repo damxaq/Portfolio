@@ -31,12 +31,12 @@ export default function Post() {
         <h2 className="route-description">
           Some of my recent personal programming projects
         </h2>
-        <div className="articles-wrapper">
+        <div className="projects-wrapper">
           {postData &&
             postData.map((post, index) => (
               <article key={post.slug.current}>
                 <Link to={"/post/" + post.slug.current}>
-                  <span className="article-span" key={index}>
+                  <span className="project-span" key={index}>
                     <img
                       src={post.mainImage.asset.url}
                       alt={post.mainImage.alt}

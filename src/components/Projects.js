@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
 
-export default function Post() {
-  const [postData, setPostData] = useState(null);
+export default function Projects() {
+  const [projectData, setProjectData] = useState(null);
 
   useEffect(() => {
     sanityClient
@@ -20,29 +20,29 @@ export default function Post() {
             }
         }`
       )
-      .then((data) => setPostData(data))
+      .then((data) => setProjectData(data))
       .catch(console.error);
   }, []);
 
   return (
-    <main className="posts-main">
-      <section className="posts-container">
+    <main className="projects-main">
+      <section className="projects-container">
         <h1 className="route-title">Projects</h1>
         <h2 className="route-description">
           Some of my recent personal programming projects
         </h2>
         <div className="projects-wrapper">
-          {postData &&
-            postData.map((post, index) => (
-              <article key={post.slug.current}>
-                <Link to={"/post/" + post.slug.current}>
+          {projectData &&
+            projectData.map((project, index) => (
+              <article key={project.slug.current}>
+                <Link to={"/post/" + project.slug.current}>
                   <span className="project-span" key={index}>
                     <img
-                      src={post.mainImage.asset.url}
-                      alt={post.mainImage.alt}
+                      src={project.mainImage.asset.url}
+                      alt={project.mainImage.alt}
                     />
                     <span>
-                      <h3>{post.title}</h3>
+                      <h3>{project.title}</h3>
                     </span>
                   </span>
                 </Link>

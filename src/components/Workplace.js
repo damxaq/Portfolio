@@ -71,7 +71,11 @@ export default function Workplace() {
                     </div>
                   )}
 
-                  <p>{workplace.description}</p>
+                  <p
+                    dangerouslySetInnerHTML={{
+                      __html: workplace.description,
+                    }}
+                  ></p>
                   <a
                     href={workplace.link}
                     rel="noopener noreferrer"

@@ -3,7 +3,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import SinglePost from "./components/SinglePost";
 import Workplace from "./components/Workplace";
-import Post from "./components/Post";
+import Projects from "./components/Projects";
 import NavBar from "./components/Navbar";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route component={Home} path="/" exact />
         <Route component={About} path="/about" />
         <Route component={SinglePost} path="/post/:slug" />
-        <Route component={Post} path="/projects" />
+        <Route component={Projects} path="/projects" />
         <Route component={Workplace} path="/workplaces" />
       </Switch>
     </BrowserRouter>

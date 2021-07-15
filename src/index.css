@@ -11,6 +11,7 @@ a {
 }
 
 main {
+  background-color: #202122;
   background-image: url("background.jpg");
   background-size: cover;
 }
@@ -289,7 +290,6 @@ strong {
   background-color: rgb(28, 20, 98);
   border-radius: 0.5rem;
   box-shadow: 3px 6px 10px rgb(44, 44, 44);
-  /* display: flex; */
   padding: 4rem;
 }
 

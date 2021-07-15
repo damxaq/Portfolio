@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client.js";
+import Loader from "react-loader-spinner";
 
 export default function Projects() {
   const [projectData, setProjectData] = useState(null);
@@ -31,9 +32,9 @@ export default function Projects() {
         <h2 className="route-description">
           Some of my recent personal programming projects
         </h2>
-        <div className="projects-wrapper">
-          {projectData &&
-            projectData.map((project, index) => (
+        {projectData ? (
+          <div className="projects-wrapper">
+            {projectData.map((project, index) => (
               <article key={project.slug.current}>
                 <Link to={"/post/" + project.slug.current}>
                   <span className="project-span" key={index}>
@@ -48,7 +49,12 @@ export default function Projects() {
                 </Link>
               </article>
             ))}
-        </div>
+          </div>
+        ) : (
+          <div className="loader-container">
+            <Loader type="ThreeDots" color="#00BFFF" height={150} width={150} />
+          </div>
+        )}
       </section>
     </main>
   );

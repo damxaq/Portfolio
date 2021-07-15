@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanityClient from "../client.js";
+import Loader from "react-loader-spinner";
 
 export default function Workplace() {
   const [workData, setWorkData] = useState(null);
@@ -34,9 +35,9 @@ export default function Workplace() {
         <h2 className="route-description">
           My professional experience as software developer
         </h2>
-        <section>
-          {workData &&
-            workData.map((workplace, index) => (
+        {workData ? (
+          <section>
+            {workData.map((workplace, index) => (
               <article key={index}>
                 <h3 className="job-title">
                   <a
@@ -86,7 +87,12 @@ export default function Workplace() {
                 </div>
               </article>
             ))}
-        </section>
+          </section>
+        ) : (
+          <div className="loader-container">
+            <Loader type="ThreeDots" color="#00BFFF" height={150} width={150} />
+          </div>
+        )}
       </section>
     </main>
   );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import Loader from "react-loader-spinner";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -49,7 +50,9 @@ export default function About() {
           </section>
         </div>
       ) : (
-        <div>Loading...</div>
+        <div className="loader-container">
+          <Loader type="ThreeDots" color="#00BFFF" height={150} width={150} />
+        </div>
       )}
     </main>
   );

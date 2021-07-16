@@ -1,6 +1,6 @@
 export default {
-  name: "post",
-  title: "Post",
+  name: "project",
+  title: "Project",
   type: "document",
   fields: [
     {
@@ -32,14 +32,29 @@ export default {
       },
     },
     {
-      name: "publishedAt",
-      title: "Published at",
-      type: "datetime",
+      name: "order",
+      title: "Order",
+      type: "number",
     },
     {
       name: "body",
       title: "Body",
       type: "blockContent",
+    },
+    {
+      name: "github",
+      title: "Github",
+      type: "url",
+    },
+    {
+      name: "url",
+      title: "Url",
+      type: "url",
+    },
+    {
+      name: "video",
+      title: "Video",
+      type: "url",
     },
   ],
 

@@ -9,7 +9,7 @@ export default function Projects() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "post"]{
+        `*[_type == "project"]{
             title,
             slug,
             mainImage{

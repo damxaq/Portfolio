@@ -13,7 +13,6 @@ a {
 main {
   background-color: #202122;
   background-image: url("background.jpg");
-  background-size: cover;
 }
 
 .home section {
@@ -117,6 +116,7 @@ main {
 
 .projects-container {
   width: 100%;
+  max-width: 60rem;
   margin: auto;
 }
 
@@ -134,15 +134,15 @@ main {
   display: flex;
   justify-content: center;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .projects-container h3 {
-  color: white;
+  color: rgb(147, 211, 190);
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0.8rem 1rem;
-  background-color: rebeccapurple;
-  opacity: 0.8;
+  background-color: rgba(53, 53, 53, 0.9);
   border-radius: 0.25rem;
 }
 
@@ -157,13 +157,18 @@ main {
 
 .project-span {
   display: block;
-  height: 20rem;
+  height: 25rem;
   position: relative;
+  overflow: hidden;
   border-radius: 10px;
   line-height: 1.375;
   background-color: white;
   border-left: solid rgb(10, 63, 235) 10px;
   box-shadow: 3px 6px 10px rgb(44, 44, 44);
+}
+
+.project-span:hover {
+  border-left: solid rgb(84, 128, 251) 10px;
 }
 
 .project-span img {
@@ -173,17 +178,20 @@ main {
   border-bottom-right-radius: 0.25rem;
   object-fit: cover;
   position: absolute;
+  transition: ease 0.3s;
+}
+
+.project-span:hover img {
+  transform: scale(1.1);
 }
 
 .project-span span {
   display: block;
   position: relative;
-  height: 100%;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
   padding-right: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 1rem;
 }
 
 .jobs-main {
@@ -192,6 +200,7 @@ main {
 }
 
 .jobs-container {
+  max-width: 60rem;
   width: 100%;
   margin: auto;
 }
@@ -324,7 +333,7 @@ strong {
 }
 
 .single-post-main {
-  background-color: rgb(185, 184, 184);
+  background-color: #202122;
   min-height: 100vh;
   padding: 3rem;
 }

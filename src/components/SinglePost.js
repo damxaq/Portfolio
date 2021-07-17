@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import Loader from "react-loader-spinner";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -35,38 +36,42 @@ export default function SinglePost() {
       .catch(console.error);
   }, [slug]);
 
-  if (!singlePost) return <div>Loading...</div>;
-
   return (
     <main className="single-post-main">
-      <article className="single-post-container">
-        <header>
-          <div className="single-post-card-container">
-            <div className="single-post-card">
-              <h1>{singlePost.title}</h1>
-              <div>
-                <img
-                  src={urlFor(singlePost.authorImage).url()}
-                  alt={singlePost.name}
-                />
-                <p>{singlePost.name}</p>
+      {singlePost ? (
+        <article className="single-post-container">
+          <header>
+            <div className="single-post-card-container">
+              <div className="single-post-card">
+                <h1>{singlePost.title}</h1>
+                <div>
+                  <img
+                    src={urlFor(singlePost.authorImage).url()}
+                    alt={singlePost.name}
+                  />
+                  <p>{singlePost.name}</p>
+                </div>
               </div>
             </div>
+            <img
+              src={singlePost.mainImage.asset.url}
+              alt={singlePost.title}
+              className="post-image"
+            />
+          </header>
+          <div className="post-block-content">
+            <BlockContent
+              blocks={singlePost.body}
+              projectId="2gnt31fi"
+              dataset="production"
+            />
           </div>
-          <img
-            src={singlePost.mainImage.asset.url}
-            alt={singlePost.title}
-            className="post-image"
-          />
-        </header>
-        <div className="post-block-content">
-          <BlockContent
-            blocks={singlePost.body}
-            projectId="2gnt31fi"
-            dataset="production"
-          />
+        </article>
+      ) : (
+        <div className="loader-container">
+          <Loader type="ThreeDots" color="#00BFFF" height={150} width={150} />
         </div>
-      </article>
+      )}
     </main>
   );
 }

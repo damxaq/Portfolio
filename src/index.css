@@ -58,16 +58,15 @@ main {
   box-shadow: 6px 9px 15px rgb(19, 19, 19);
 }
 
-.navbar-header {
-  background-color: rgba(83, 93, 102, 255);
-}
-
 .navbar-container {
+  background-color: rgba(83, 93, 102, 255);
   width: 100%;
   margin: auto;
   display: flex;
   justify-content: space-between;
   padding: 0 2rem;
+  position: fixed;
+  z-index: 100;
 }
 
 .navbar-container nav {
@@ -111,7 +110,7 @@ main {
 
 .projects-main {
   min-height: 100vh;
-  padding: 3rem;
+  padding: 5rem 3rem;
 }
 
 .projects-container {
@@ -196,7 +195,7 @@ main {
 
 .jobs-main {
   min-height: 100vh;
-  padding: 3rem;
+  padding: 5rem 3rem;
 }
 
 .jobs-container {
@@ -289,7 +288,7 @@ strong {
 }
 
 .about-container {
-  padding: 3rem;
+  padding: 5rem 3rem;
   width: 100%;
   margin: auto;
   position: relative;
@@ -335,7 +334,7 @@ strong {
 .single-post-main {
   background-color: #202122;
   min-height: 100vh;
-  padding: 3rem;
+  padding: 5rem 3rem;
 }
 
 .single-post-container {
@@ -344,7 +343,7 @@ strong {
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.5rem;
-  background-color: rgb(158, 216, 158);
+  background-color: #3ea6ff;
 }
 
 .single-post-container header {

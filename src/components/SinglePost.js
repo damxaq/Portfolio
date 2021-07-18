@@ -28,33 +28,25 @@ export default function SinglePost() {
         }
       },
       body,
-      "name": author->name,
-      "authorImage": author->image
+      github,
+      url,
+      video,
     }`
       )
       .then((data) => setSinglePost(data[0]))
       .catch(console.error);
   }, [slug]);
 
+  console.log(singlePost);
+
   return (
     <main className="single-post-main">
       {singlePost ? (
         <article className="single-post-container">
+          <h1>{singlePost.title}</h1>
           <header>
-            <div className="single-post-card-container">
-              <div className="single-post-card">
-                <h1>{singlePost.title}</h1>
-                <div>
-                  <img
-                    src={urlFor(singlePost.authorImage).url()}
-                    alt={singlePost.name}
-                  />
-                  <p>{singlePost.name}</p>
-                </div>
-              </div>
-            </div>
             <img
-              src={singlePost.mainImage.asset.url}
+              src={urlFor(singlePost.mainImage).url()}
               alt={singlePost.title}
               className="post-image"
             />

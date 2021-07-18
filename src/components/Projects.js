@@ -12,6 +12,7 @@ export default function Projects() {
         `*[_type == "project"]{
             title,
             slug,
+            order,
             mainImage{
                 asset->{
                     _id,
@@ -21,7 +22,12 @@ export default function Projects() {
             }
         }`
       )
-      .then((data) => setProjectData(data))
+      .then((data) => {
+        const sortedData = data.sort((a, b) =>
+          a.order > b.order ? 1 : a.order < b.order ? -1 : 0
+        );
+        setProjectData(sortedData);
+      })
       .catch(console.error);
   }, []);
 

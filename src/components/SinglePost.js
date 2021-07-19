@@ -42,23 +42,33 @@ export default function SinglePost() {
   return (
     <main className="single-post-main">
       {singlePost ? (
-        <article className="single-post-container">
+        <>
           <h1>{singlePost.title}</h1>
-          <header>
-            <img
-              src={urlFor(singlePost.mainImage).url()}
-              alt={singlePost.title}
-              className="post-image"
-            />
-          </header>
-          <div className="post-block-content">
-            <BlockContent
-              blocks={singlePost.body}
-              projectId="2gnt31fi"
-              dataset="production"
-            />
-          </div>
-        </article>
+          <article className="single-post-container">
+            <header>
+              <img
+                src={urlFor(singlePost.mainImage).url()}
+                alt={singlePost.title}
+                className="post-image"
+              />
+            </header>
+            <div className="post-block-content">
+              <BlockContent
+                blocks={singlePost.body}
+                projectId="2gnt31fi"
+                dataset="production"
+              />
+            </div>
+            <div className="post-video">
+              <iframe
+                src={singlePost.video}
+                width="100%"
+                height="100%"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </article>
+        </>
       ) : (
         <div className="loader-container">
           <Loader type="ThreeDots" color="#00BFFF" height={150} width={150} />

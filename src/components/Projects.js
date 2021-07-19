@@ -55,23 +55,6 @@ export default function Projects() {
                 </Link>
               </article>
             ))}
-            {/* <div
-              style={{
-                width: "100%",
-                height: "0px",
-                position: "relative",
-                paddingBottom: "56.250%",
-              }}
-            >
-              <iframe
-                // src="https://streamable.com/ghtmb2"
-                src="https://giant.gfycat.com/AgedPleasedArabianhorse.webm"
-                width="100%"
-                height="100%"
-                allowFullScreen
-                style={{ width: "100%", height: "100%", position: "absolute" }}
-              ></iframe>
-            </div> */}
           </div>
         ) : (
           <div className="loader-container">

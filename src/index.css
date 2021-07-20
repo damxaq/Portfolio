@@ -368,9 +368,33 @@ strong {
   height: 400px;
 }
 
-.post-block-content {
+.post-details {
   padding: 3rem 4rem;
   max-width: 100%;
+}
+
+.post-links {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.post-links span {
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+
+.post-links a {
+  color: rgb(130, 230, 16);
+}
+
+.post-links a:hover {
+  color: rgb(193, 255, 122);
+}
+
+.post-block-content {
+  font-size: 1.1rem;
 }
 
 .post-video {

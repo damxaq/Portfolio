@@ -11,7 +11,7 @@ function urlFor(source) {
 }
 
 export default function SinglePost() {
-  const [singlePost, setSinglePost] = useState(null);
+  const [project, setProject] = useState(null);
   const { slug } = useParams();
 
   useEffect(() => {
@@ -33,38 +33,53 @@ export default function SinglePost() {
       video,
     }`
       )
-      .then((data) => setSinglePost(data[0]))
+      .then((data) => setProject(data[0]))
       .catch(console.error);
   }, [slug]);
 
-  console.log(singlePost);
+  console.log(project);
 
   return (
     <main className="single-post-main">
-      {singlePost ? (
+      {project ? (
         <>
-          <h1>{singlePost.title}</h1>
+          <h1>{project.title}</h1>
           <article className="single-post-container">
             <header>
               <img
-                src={urlFor(singlePost.mainImage).url()}
-                alt={singlePost.title}
+                src={urlFor(project.mainImage).url()}
+                alt={project.title}
                 className="post-image"
               />
             </header>
-            <div className="post-block-content">
+            <div className="post-details">
+              <div className="post-links">
+                <span>
+                  See the project:{" "}
+                  <a href={project.url} target="_blank">
+                    {project.url}
+                  </a>
+                </span>
+                <span>
+                  Check on Github:{" "}
+                  <a href={project.github} target="_blank">
+                    {project.github}
+                  </a>
+                </span>
+              </div>
               <BlockContent
-                blocks={singlePost.body}
+                className="post-block-content"
+                blocks={project.body}
                 projectId="2gnt31fi"
                 dataset="production"
               />
             </div>
             <div className="post-video">
               <iframe
-                src={singlePost.video}
+                src={project.video}
                 width="100%"
                 height="100%"
-                allowfullscreen
+                allowFullScreen
               ></iframe>
             </div>
           </article>

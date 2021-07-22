@@ -53,6 +53,11 @@ export default function Navbar() {
             target="_blank"
             fgColor="#fff"
           />
+          <SocialIcon
+            url="https://app.codesignal.com/profile/damian_c1"
+            target="_blank"
+            fgColor="#fff"
+          />
         </div>
       </div>
     </header>

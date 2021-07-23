@@ -49,12 +49,13 @@ export default function Navbar() {
             fgColor="#fff"
           />
           <SocialIcon
-            url="https://www.deviantart.com/damxaq"
+            url="https://app.codesignal.com/profile/damian_c1"
             target="_blank"
             fgColor="#fff"
+            network="foursquare"
           />
           <SocialIcon
-            url="https://app.codesignal.com/profile/damian_c1"
+            url="https://www.deviantart.com/damxaq"
             target="_blank"
             fgColor="#fff"
           />

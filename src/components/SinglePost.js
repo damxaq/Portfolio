@@ -56,13 +56,13 @@ export default function SinglePost() {
               <div className="post-links">
                 <span>
                   See the project:{" "}
-                  <a href={project.url} target="_blank">
+                  <a href={project.url} target="_blank" rel="noreferrer">
                     {project.url}
                   </a>
                 </span>
                 <span>
                   Check on Github:{" "}
-                  <a href={project.github} target="_blank">
+                  <a href={project.github} target="_blank" rel="noreferrer">
                     {project.github}
                   </a>
                 </span>
@@ -76,6 +76,7 @@ export default function SinglePost() {
             </div>
             <div className="post-video">
               <iframe
+                title={project.title}
                 src={project.video}
                 width="100%"
                 height="100%"

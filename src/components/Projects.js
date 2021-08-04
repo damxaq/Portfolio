@@ -43,7 +43,14 @@ export default function Projects() {
             {projectData.map((project, index) => (
               <article key={project.slug.current}>
                 <Link to={"/post/" + project.slug.current}>
-                  <span className="project-span" key={index}>
+                  <span
+                    className={
+                      project.title === "Portfolio"
+                        ? "project-span zooom"
+                        : "project-span"
+                    }
+                    key={index}
+                  >
                     <img
                       src={project.mainImage.asset.url}
                       alt={project.mainImage.alt}

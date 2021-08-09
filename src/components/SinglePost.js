@@ -44,7 +44,7 @@ export default function SinglePost() {
       {project ? (
         <>
           <h1>{project.title}</h1>
-          <article className="single-post-container">
+          <article className="single-post-container container">
             <header>
               <img
                 src={urlFor(project.mainImage).url()}

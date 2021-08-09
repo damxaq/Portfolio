@@ -33,7 +33,7 @@ export default function Projects() {
 
   return (
     <main className="projects-main">
-      <section className="projects-container">
+      <section className="projects-container container">
         <h1 className="route-title">Projects</h1>
         <h2 className="route-description">
           Some of my recent personal programming projects

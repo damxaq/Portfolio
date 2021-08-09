@@ -30,7 +30,7 @@ export default function Workplace() {
 
   return (
     <main className="jobs-main">
-      <section className="jobs-container">
+      <section className="jobs-container container">
         <h1 className="route-title">My Jobs</h1>
         <h2 className="route-description">
           My professional experience as software developer

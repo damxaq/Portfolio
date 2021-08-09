@@ -15,6 +15,12 @@ main {
   background-image: url("background.jpg");
 }
 
+.container {
+  width: 100%;
+  max-width: 60rem;
+  margin: auto;
+}
+
 .home section {
   position: relative;
   display: flex;
@@ -113,12 +119,6 @@ main {
   padding: 5rem 3rem;
 }
 
-.projects-container {
-  width: 100%;
-  max-width: 60rem;
-  margin: auto;
-}
-
 .route-title {
   color: rgb(206, 206, 206);
   font-size: 2.6rem;
@@ -211,12 +211,6 @@ main {
 .jobs-main {
   min-height: 100vh;
   padding: 5rem 3rem;
-}
-
-.jobs-container {
-  max-width: 60rem;
-  width: 100%;
-  margin: auto;
 }
 
 .jobs-container section {
@@ -319,7 +313,6 @@ strong {
 .my-photo {
   border-radius: 0.5rem;
   width: 10rem;
-  height: 10rem;
   margin-right: 1rem;
 }
 
@@ -362,10 +355,7 @@ strong {
 }
 
 .single-post-container {
-  max-width: 60rem;
   box-shadow: 3px 6px 10px rgb(44, 44, 44);
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 0.5rem;
   background-color: rgba(62, 166, 255, 0.3);
   color: white;

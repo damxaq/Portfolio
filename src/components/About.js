@@ -28,7 +28,7 @@ export default function About() {
   return (
     <main className="about-main">
       {author ? (
-        <div className="about-container">
+        <div className="about-container container">
           <section>
             <img
               src={urlFor(author.authorImage).url()}

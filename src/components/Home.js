@@ -10,7 +10,7 @@ export default function Home() {
         <img src={image} alt="Damian Celico" className="home-image" />
         <h3>
           I am a software developer with 3 years of commercial experience and
-          dealing with programming as a hobby for around 10 years. <br /> I am
+          dealing with programming as a hobby for around 8 years. <br /> I am
           most passionate about coding in React and <br />
           always wish to learn new awesome stuff. <br />
           I'm also a photographer and cyclist.

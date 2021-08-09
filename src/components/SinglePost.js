@@ -57,13 +57,13 @@ export default function SinglePost() {
                 <span>
                   See the project:{" "}
                   <a href={project.url} target="_blank" rel="noreferrer">
-                    {project.url}
+                    {project.title}
                   </a>
                 </span>
                 <span>
                   Check on Github:{" "}
                   <a href={project.github} target="_blank" rel="noreferrer">
-                    {project.github}
+                    {`${project.title} - Github`}
                   </a>
                 </span>
               </div>

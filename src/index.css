@@ -392,6 +392,7 @@ strong {
 
 .post-links a {
   color: rgb(130, 230, 16);
+  white-space: nowrap;
 }
 
 .post-links a:hover {
@@ -419,4 +420,65 @@ strong {
   display: flex;
   justify-content: center;
   padding-top: 3rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .main-padding {
+    padding: 5rem 0.5rem;
+  }
+
+  .home section h3 {
+    padding: 0 1rem;
+  }
+
+  .navbar-container {
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .social-icons-container {
+    display: none;
+  }
+
+  .navbar-container {
+    justify-content: space-around;
+  }
+
+  .navlink {
+    font-size: 0.8rem;
+  }
+
+  .post-details {
+    padding: 3rem 1rem;
+  }
+
+  .job-title {
+    font-size: 1.5rem;
+  }
+
+  .jobs-container section article {
+    padding: 1rem;
+  }
+
+  .route-title {
+    font-size: 2rem;
+  }
+
+  .route-description {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .home section h1 {
+    font-size: 2rem;
+  }
+
+  .home section h2 {
+    font-size: 1.5rem;
+  }
+
+  .home section h3 {
+    font-size: 1rem;
+  }
 }

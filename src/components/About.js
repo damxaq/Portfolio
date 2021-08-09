@@ -26,7 +26,7 @@ export default function About() {
   }, []);
 
   return (
-    <main className="about-main">
+    <main className="about-main main-padding">
       {author ? (
         <div className="about-container container">
           <section>

@@ -40,7 +40,7 @@ export default function SinglePost() {
   console.log(project);
 
   return (
-    <main className="single-post-main">
+    <main className="single-post-main main-padding">
       {project ? (
         <>
           <h1>{project.title}</h1>

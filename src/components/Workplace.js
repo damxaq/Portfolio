@@ -29,7 +29,7 @@ export default function Workplace() {
   }, []);
 
   return (
-    <main className="jobs-main">
+    <main className="jobs-main main-padding">
       <section className="jobs-container container">
         <h1 className="route-title">My Jobs</h1>
         <h2 className="route-description">

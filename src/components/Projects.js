@@ -32,7 +32,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <main className="projects-main">
+    <main className="projects-main main-padding">
       <section className="projects-container container">
         <h1 className="route-title">Projects</h1>
         <h2 className="route-description">

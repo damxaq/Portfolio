@@ -30,22 +30,26 @@ export default function About() {
       {author ? (
         <div className="about-container container">
           <section>
-            <img
-              src={urlFor(author.authorImage).url()}
-              className="my-photo"
-              alt={author.name}
-            />
-            <div className="about-card">
-              <h1>
-                Hey there. I'm <span>{author.name}</span>
-              </h1>
-              <div className="about-block-content">
-                <BlockContent
-                  blocks={author.bio}
-                  projectId="2gnt31fi"
-                  dataset="production"
-                />
+            <div className="about-header">
+              <img
+                src={urlFor(author.authorImage).url()}
+                className="my-photo"
+                alt={author.name}
+              />
+              <div className="about-card">
+                <h1>Hello there.</h1>
+                <h1>
+                  My name is <span>{author.name}.</span>
+                </h1>
               </div>
+            </div>
+
+            <div className="about-block-content">
+              <BlockContent
+                blocks={author.bio}
+                projectId="2gnt31fi"
+                dataset="production"
+              />
             </div>
           </section>
         </div>

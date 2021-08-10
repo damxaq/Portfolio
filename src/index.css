@@ -305,29 +305,38 @@ strong {
 }
 
 .about-container section {
-  background-color: rgb(28, 20, 98);
+  background-color: rgba(9, 8, 19, 0.431);
   border-radius: 0.5rem;
   box-shadow: 3px 6px 10px rgb(44, 44, 44);
   padding: 4rem;
 }
 
+.about-header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
 .my-photo {
   border-radius: 0.5rem;
-  width: 10rem;
-  margin-right: 1rem;
+  width: 150px;
+  min-width: 150px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 2rem;
+  border: 1px solid rgb(147, 211, 190);
 }
 
 .about-card {
   font-size: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .about-card h1 {
   font-family: "PT Sans Narrow", sans-serif;
   font-size: 3rem;
-  color: green;
+  color: rgb(147, 211, 190);
   margin-bottom: 1rem;
 }
 
@@ -336,8 +345,16 @@ strong {
 }
 
 .about-block-content {
-  color: white;
-  font-size: 1rem;
+  color: rgb(147, 211, 190);
+  font-size: 1.1rem;
+}
+
+.about-block-content h1 {
+  font-size: 2rem;
+}
+
+.about-block-content p {
+  margin-bottom: 1rem;
 }
 
 .single-post-main {

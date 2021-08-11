@@ -19,6 +19,7 @@ main {
   width: 100%;
   max-width: 60rem;
   margin: auto;
+  min-width: 300px;
 }
 
 .main-padding {
@@ -31,6 +32,7 @@ main {
   padding-top: 6rem;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 300px;
 }
 
 .home section h1 {

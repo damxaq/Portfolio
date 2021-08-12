@@ -353,11 +353,31 @@ strong {
 }
 
 .about-block-content h1 {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  border-top: 1px solid rgb(147, 211, 190);
+  padding: 2rem 0 1rem 0;
+  font-family: "Julius Sans One", sans-serif;
+}
+
+.about-block-content h2 {
+  font-weight: bold;
 }
 
 .about-block-content p {
   margin-bottom: 1rem;
+}
+
+.about-block-content a {
+  color: rgb(0, 221, 255);
+}
+
+.about-block-content a:hover {
+  color: rgb(24, 134, 97);
+}
+
+.about-block-content em ~ a {
+  position: absolute;
+  left: 12rem;
 }
 
 .single-post-main {
@@ -525,5 +545,9 @@ strong {
 
   .my-photo {
     margin-bottom: 2rem;
+  }
+
+  .about-block-content em ~ a {
+    left: 8rem;
   }
 }

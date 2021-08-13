@@ -25,6 +25,19 @@ export default function About() {
       .catch(console.error);
   }, []);
 
+  // Setting urls from block content to open in new tab
+  useEffect(() => {
+    if (author) {
+      const urls = document
+        .getElementsByClassName("about-block-content")[0]
+        .getElementsByTagName("a");
+
+      for (const url of urls) {
+        url.setAttribute("target", "_blank");
+      }
+    }
+  }, [author]);
+
   return (
     <main className="about-main main-padding">
       {author ? (

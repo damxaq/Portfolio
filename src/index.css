@@ -472,7 +472,7 @@ strong {
   padding-top: 3rem;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 750px) {
   .main-padding {
     padding: 5rem 0.5rem;
   }
@@ -484,6 +484,10 @@ strong {
   .navbar-container {
     padding: 0;
   }
+
+  .navlink {
+    padding: 0 0.3rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -491,12 +495,14 @@ strong {
     display: none;
   }
 
-  .navbar-container {
-    justify-content: space-around;
+  .navbar-container nav {
+    justify-content: space-evenly;
+    width: 100%;
   }
 
   .navlink {
     font-size: 0.8rem;
+    margin: 1rem 0.4rem;
   }
 
   .post-details {

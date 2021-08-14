@@ -26,15 +26,11 @@ export default function Resume() {
       .catch(console.error);
   }, []);
 
-  // TODO: style pointer and fix responsive
+  // TODO: prevent spam download
   return (
     <>
       {resumeFile ? (
-        <a
-          href={resumeFile ? getUrlFromId() : "#"}
-          className="navlink"
-          style={{ cursor: "pointer" }}
-        >
+        <a href={resumeFile ? getUrlFromId() : "#"} className="navlink">
           Resume 📥
         </a>
       ) : (

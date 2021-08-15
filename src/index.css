@@ -73,6 +73,7 @@ main {
 .navbar-container {
   background-color: rgba(83, 93, 102, 255);
   width: 100%;
+  min-width: 320px;
   margin: auto;
   display: flex;
   justify-content: space-between;

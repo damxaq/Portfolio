@@ -7,6 +7,7 @@ const DATASET = "production";
 
 export default function Resume() {
   const [resumeFile, setResumeFile] = useState(null);
+  const [downloadReady, setDownloadReady] = useState(true);
 
   const getUrlFromId = () => {
     const [_file, id, extension] = resumeFile.split("-");
@@ -26,11 +27,23 @@ export default function Resume() {
       .catch(console.error);
   }, []);
 
-  // TODO: prevent spam download
+  useEffect(() => {
+    const timeout = setTimeout(() => setDownloadReady(true), 20000);
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [downloadReady]);
+
   return (
     <>
-      {resumeFile ? (
-        <a href={resumeFile ? getUrlFromId() : "#"} className="navlink">
+      {resumeFile && downloadReady ? (
+        <a
+          href={resumeFile ? getUrlFromId() : "#"}
+          className="navlink"
+          onClick={() => {
+            setDownloadReady(false);
+          }}
+        >
           Resume 📥
         </a>
       ) : (

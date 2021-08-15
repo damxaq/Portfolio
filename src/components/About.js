@@ -4,6 +4,9 @@ import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import Loader from "react-loader-spinner";
 
+const PROJECT_ID = process.env.REACT_APP_PROJECT_ID;
+const DATASET = process.env.REACT_APP_DATASET;
+
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
@@ -60,8 +63,8 @@ export default function About() {
             <div className="about-block-content">
               <BlockContent
                 blocks={author.bio}
-                projectId="2gnt31fi"
-                dataset="production"
+                projectId={PROJECT_ID}
+                dataset={DATASET}
               />
             </div>
           </section>

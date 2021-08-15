@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import sanityClient from "../client.js";
 
-// TODO: set env
-const PROJECT_ID = "2gnt31fi";
-const DATASET = "production";
+const PROJECT_ID = process.env.REACT_APP_PROJECT_ID;
+const DATASET = process.env.REACT_APP_DATASET;
 
 export default function Resume() {
   const [resumeFile, setResumeFile] = useState(null);

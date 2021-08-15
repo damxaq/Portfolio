@@ -5,6 +5,9 @@ import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
 import Loader from "react-loader-spinner";
 
+const PROJECT_ID = process.env.REACT_APP_PROJECT_ID;
+const DATASET = process.env.REACT_APP_DATASET;
+
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
   return builder.image(source);
@@ -37,8 +40,6 @@ export default function SinglePost() {
       .catch(console.error);
   }, [slug]);
 
-  console.log(project);
-
   return (
     <main className="single-post-main main-padding">
       {project ? (
@@ -70,8 +71,8 @@ export default function SinglePost() {
               <BlockContent
                 className="post-block-content"
                 blocks={project.body}
-                projectId="2gnt31fi"
-                dataset="production"
+                projectId={PROJECT_ID}
+                dataset={DATASET}
               />
             </div>
             <div className="post-video">

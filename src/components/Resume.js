@@ -27,7 +27,7 @@ export default function Resume() {
   }, []);
 
   useEffect(() => {
-    const timeout = setTimeout(() => setDownloadReady(true), 20000);
+    const timeout = setTimeout(() => setDownloadReady(true), 30000);
     return () => {
       clearTimeout(timeout);
     };

@@ -442,6 +442,7 @@ strong {
 
 .post-block-content {
   font-size: 1.1rem;
+  position: relative;
 }
 
 .post-block-content p {
@@ -452,6 +453,22 @@ strong {
   list-style-type: square;
   margin-left: 2rem;
   line-height: 1.8rem;
+}
+
+.post-block-content h3 {
+  margin-bottom: 1rem;
+}
+
+.post-block-content h3:first-of-type {
+  text-decoration: underline;
+  padding-top: 1rem;
+  color: rgb(183, 245, 38);
+}
+
+.post-block-content em {
+  color: rgb(130, 230, 16);
+  position: absolute;
+  left: 8rem;
 }
 
 .post-video {
@@ -557,5 +574,9 @@ strong {
 
   .about-block-content em ~ a {
     left: 8rem;
+  }
+
+  .post-block-content em {
+    left: 6.5rem;
   }
 }

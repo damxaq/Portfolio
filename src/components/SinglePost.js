@@ -42,7 +42,7 @@ export default function SinglePost() {
 
   return (
     <main className="single-post-main main-padding">
-      {project ? (
+      {project && project.video ? (
         <>
           <h1>{project.title}</h1>
           <article className="single-post-container container">
@@ -78,7 +78,7 @@ export default function SinglePost() {
             <div className="post-video">
               <iframe
                 title={project.title}
-                src={project.video}
+                src={"https://streamable.com/e/" + project.video}
                 width="100%"
                 height="100%"
                 allowFullScreen

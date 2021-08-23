@@ -39,6 +39,7 @@ export default function Resume() {
         <a
           href={resumeFile ? getUrlFromId() : "#"}
           className="navlink"
+          target="_blank"
           onClick={() => {
             setDownloadReady(false);
           }}

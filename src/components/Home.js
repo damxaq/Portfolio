@@ -9,8 +9,8 @@ export default function Home() {
         <h2>Full-Stack Software Developer</h2>
         <img src={image} alt="Damian Celico" className="home-image" />
         <h3>
-          I am a software developer with 3 years of commercial experience and
-          dealing with programming as a hobby for around 8 years. <br /> I am
+          I am a software developer with 5 years of commercial experience and
+          dealing with programming as a hobby for around 7 years. <br /> I am
           most passionate about coding in React and <br />
           always wish to learn new awesome stuff. <br />
           I'm also a photographer and cyclist.
